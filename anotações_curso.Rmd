@@ -1,0 +1,71 @@
+---
+title: "r avançado"
+author: "eu"
+date: "05/01/2021"
+output: pdf_document
+---
+```{r}
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+código comum if-else
+
+```{r}
+#if(<condition1>) {
+      ## do something
+#} else if(<condition2>) {
+      ## do something different
+#} else {
+      ## do something different
+#}
+```
+
+exemplo
+```{r}
+## Generate a uniform random number
+x <- runif(1, 0, 10)
+if(x > 3) {
+        y <- 10
+} else {
+        y <- 0
+}
+```
+
+apenas ifs
+```{r}
+#if(<condition1>) {
+#}
+#if(<condition2>) {
+#}
+```
+
+Next e break
+
+next são para pular uma interação
+```{r}
+for(i in 1:100) {
+        if(i <= 20) {
+                ## Skip the first 20 iterations
+                next                 
+        }
+        ## Do something here
+}
+```
+
+breaks são para parar um loop imediatamente. Bom pra colocar um condição de término.
+```{r}
+for(i in 1:100) {
+      print(i)
+
+      if(i > 20) {
+              ## Stop loop after 20 iterations
+              break  
+      }     
+}
+```
+
